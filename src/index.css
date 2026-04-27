@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+@theme {
+  --color-retro-green: #41FF00;
+  --color-retro-green-dim: rgba(65, 255, 0, 0.15);
+  --color-retro-green-subtle: rgba(65, 255, 0, 0.05);
+  
+  --color-brand-black: #0A0A0A;
+  --color-brand-brown-dark: #2B1E12;
+  --color-brand-brown-light: #4A3B2C;
+  --color-brand-cream: #FAFCF9;
+  
+  --font-sans: "Courier", "Courier New", monospace;
+  --font-mono: "Courier", "Courier New", monospace;
+}
+
+@layer utilities {
+  .glow-text {
+    text-shadow: 0 0 10px rgba(65, 255, 0, 0.5);
+  }
+  .glow-box {
+    box-shadow: 0 0 15px rgba(65, 255, 0, 0.2);
+  }
+}
+
+body {
+  background-color: var(--color-retro-green-dim);
+  color: var(--color-brand-black);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar for tech feel */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-retro-green-dim);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-brand-brown-light);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-brand-brown-dark);
+}
+
